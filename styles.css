@@ -1,0 +1,109 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+  color: aliceblue;
+  margin: 2rem;
+}
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: transparent;
+  padding: 1rem; /* Adjust padding for smaller screens */
+}
+
+.nav a {
+  text-decoration: none;
+  color: white; /* Adjusted color for better readability */
+  padding: 0.5rem 1rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav ul li {
+  list-style: none; /* Add padding for easier touch/click */
+}
+
+/* Main content section */
+.main {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to new line on smaller screens */
+  justify-content: space-around; /* Center items horizontally */
+  padding: 2rem; /* Adjusted padding for smaller screens */
+  margin-top: 6rem; /* Adjust margin for smaller screens */
+}
+
+.main div {
+  flex: 1; /* Take full width on smaller screens */
+  text-align: center; /* Center align content */
+  padding: 1rem; /* Add padding around content */
+}
+
+.main div img {
+  max-width: 100%; /* Ensure images are responsive */
+}
+
+/* Goals section */
+.goals {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-around; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  padding: 2rem; /* Adjusted padding for smaller screens */
+  margin-top: 6rem; /* Adjust margin for smaller screens */
+}
+
+.goals div {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+.goals h3 {
+  padding: 0.5rem 0;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+}
+button {
+  /* margin-left: 4rem; */
+  /* margin-right: 4rem; */
+  padding: 1rem;
+  background-color: grey;
+}
+
+button a {
+  color: black;
+  text-decoration: none;
+}
+
+@media scren and (min-width: 480px) {
+  .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+  }
+}

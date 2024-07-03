@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akaeme Chidera</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- <div class="Header"> -->
+      <div class="nav">
+        <a href="/index.html" class="logo">Akaeme</a>
+        <ul>
+          <li><a href="#about">ABOUT</a></li>
+          <li> <a href="#goals">GOALS</a/li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    <!-- </div> -->
+    <div class="main" id="about">
+        <div class="timeContainer">
+            <!-- <span><a href="#about"></a></span> -->
+            <h3 data-testId="slackDisplayName">Walter</h3>
+            <h3 data-testId="slackEmail">akaemechidera@gmail.com</h3>
+            <h3>FRONT-END WEB DEVELOPER/UI ENGINEER</h3>
+
+            <h3 class="clock">Current UTC Time: <span id="time" data-testId="currentTime">hello</span> </h3>
+
+            <h3 data-testId="currentDay" >current day: <span id="day"></span></h3>
+
+        </div>
+        <div>
+            <img src="/Hero1.jpg" alt="hero" data-testId="slackProfilePicture"
+            width="auto"
+            height="auto"
+            >
+        </div>
+    </div>
+    
+    <div class="goals" id="goals">
+        <div>
+            <h3>2024</h3>
+            <h3>ENTRY LEVEL ROLE IN FRONTEND DEVELOPMENT</h3>
+    
+        </div>
+        <div>
+            <img src="/Hero1.jpg" alt="hero" data-testId="slackProfilePicture"
+            width="auto"
+            height="auto"
+            >
+        </div>
+       
+
+    </div>
+
+    <div class="goals">
+        <div>
+            <h3>2025</h3>
+            <h3>SENIOR FRONTEND DEVELOPER</h3>
+        </div>
+        <div>
+            <img src="/Hero1.jpg" alt="hero" data-testId="slackProfilePicture">
+        </div>
+</div>
+    
+ <div class="btn">
+        <button data-testId="hngLink"><a href="hng.tech/learn">HNG Learn</a></button>
+        <button><a href="Keyword.dog">Keyword Dog</a></button>
+        <button><a href="scrapeanyweb.site">ScrapeanyWeb</a></button>
+    </div>
+    <script>
+      
+const time = document.getElementById("time")
+const days = document.getElementById("day")
+
+function getTime() {
+
+const date = new Date();
+
+    return [
+        date.getUTCHours().toString().padStart(2, '0'),
+        date.getUTCMinutes().toString().padStart(2, '0'),
+        date.getUTCSeconds().toString().padStart(2, '0')
+    ].join(':');
+}
+
+
+function getDay(){
+    const date = new Date();
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const number = date.getUTCDay();
+    // return days[date.getUTCDay()];
+    return days[number]
+
+}
+
+function updateTimeAndDay()  {
+days.innerHTML = getDay();
+time.innerHTML = getTime();
+}
+
+updateTimeAndDay();
+
+setInterval(updateTimeAndDay, 1000);     
+        
+    </script>
+  </body>
+</html>
